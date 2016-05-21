@@ -63,6 +63,10 @@ void rearrange(char *output, char const *input,
 	{
 		int nchars = columns[col + 1] - columns[col] + 1;
 
+		if (columns[col] >= len ||
+			output_col == MAX_INPUT - 1)
+			break;
+
 		if(columns[col] >= len || output_col == MAX_INPUT - 1)
 			nchars = MAX_INPUT - output_col - 1;
 
